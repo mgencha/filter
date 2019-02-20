@@ -26,7 +26,7 @@ Once the project is imported you can execute using the maven spring-boot:run plu
 
 Access localhost:8080/index.html
 
-## Hosted
+## Hosting
 
 This web application is hosted using DigtalOcean cloud infrastructure and can be accessed [here](http://178.128.157.254:8080/index.html)
 
