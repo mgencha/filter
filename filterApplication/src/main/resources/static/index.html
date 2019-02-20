@@ -1,0 +1,51 @@
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="search.js"></script>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+</head>
+
+<body>
+<img src="portal.jpg" class="img-responsive" alt="intro" align="center">
+
+<div ng-app="search">
+    <div ng-controller="searchCtrl">
+        <div class="row">
+            <div class="col" id="header">Search Rick and Morty Characters!</div>
+        </div>
+
+        <div class="container">
+            <div class="form-group">
+                <input type="text" class="input-lg form-control large" ng-model="searchString" autofocus="autofocus"/>
+            </div>
+        </div>
+
+        <div class="table-responsive-lg">
+            <table class="table table-dark table-hover">
+                <thread>
+                    <tr>
+                        <th>Name</th>
+                        <th>Species</th>
+                        <th>Type</th>
+                        <th>Gender</th>
+                        <th>Status</th>
+                    </tr>
+                </thread>
+                <tbody>
+                <tr ng-repeat="value in names | orderBy:'name' | searchFor:searchString">
+                    <td>{{ value.name }}</td>
+                    <td>{{ value.species }}</td>
+                    <td>{{ value.type }}</td>
+                    <td>{{ value.gender }}</td>
+                    <td>{{ value.status }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
