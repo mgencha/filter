@@ -22,9 +22,13 @@ IDE of your choosing ([IntelliJ](https://www.jetbrains.com/idea/) used for this 
 
 Once the project is imported you can execute using the maven spring-boot:run plugin or command
 
-## Running the tests
+## Running Tests
 
-Access localhost:8080/index.html 
+Access localhost:8080/index.html
+
+## Hosted
+
+This web application is hosted using DigtalOcean cloud infrastructure and can be accessed [here](http://178.128.157.254:8080/index.html)
 
 ## Built With
 
